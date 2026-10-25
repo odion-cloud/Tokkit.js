@@ -58,7 +58,7 @@
   "bugs": {
     "url": "https://github.com/odion-cloud/TokKit.js/issues"
   },
-  "homepage": "https://github.com/odion-cloud/Tokkit.js#readme",
+  "homepage": "https://odion-cloud.github.io/Tokkit.js/",
   "author": "TokKit Contributors",
   "license": "MIT",
   "devDependencies": {

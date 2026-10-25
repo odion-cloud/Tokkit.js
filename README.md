@@ -57,7 +57,7 @@ const video = await tokkit.resolveVideo('https://www.tiktok.com/@user/video/1234
 console.log('Playable MP4 URL:', video.streamUrl);
 ```
 
-For complete documentation, guides, and interactive examples, visit the [TokKit Documentation](https://github.com/odion-cloud/Tokkit.js#readme).
+For complete documentation, guides, and interactive examples, visit the [TokKit Documentation](https://odion-cloud.github.io/Tokkit.js/).
 
 ## Contributing
 
