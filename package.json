@@ -1,6 +1,6 @@
 {
   "name": "@odion-cloud/tokkit.js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A comprehensive TypeScript client library for TikTok Web & Gateway APIs",
   "type": "module",
   "main": "./dist/src/index.js",
