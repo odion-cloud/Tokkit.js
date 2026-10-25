@@ -36,8 +36,6 @@ jobs:
 
       - name: Publish to NPM
         run: |
-          TOKEN=$(echo -n "${{ secrets.NPM_TOKEN }}" | tr -d '\r\n ')
-          echo "//registry.npmjs.org/:_authToken=${TOKEN}" > ~/.npmrc
           CURRENT_VERSION=$(node -p "require('./package.json').version")
           NPM_VERSION=$(npm view @odion-cloud/tokkit.js version 2>/dev/null || echo "0.0.0")
           echo "Current package.json version: $CURRENT_VERSION"
@@ -49,3 +47,5 @@ jobs:
           else
             echo "Version $CURRENT_VERSION is already published on npm. Skipping publish."
           fi
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
