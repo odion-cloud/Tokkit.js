@@ -1,0 +1,683 @@
+{
+  "metadata": {
+    "generatedAt": "2026-10-24T23:05:24.339Z",
+    "source": "https://www.tiktok.com/shortdrama",
+    "runtimeCompatibility": [
+      "Node.js (>=18)",
+      "CapacitorJS (iOS / Android WebViews with CapacitorHttp or custom fetch)",
+      "Modern Browsers (Chrome, Safari, Firefox, Edge)",
+      "Deno & Bun"
+    ],
+    "html5Playable": true
+  },
+  "categories": {
+    "genres": [
+      {
+        "id": "0",
+        "name": "All settings",
+        "filterType": 1,
+        "starlingKey": "all_settings"
+      },
+      {
+        "id": "7628991192537158672",
+        "name": "Fantasy",
+        "filterType": 2,
+        "starlingKey": "fantasy"
+      },
+      {
+        "id": "7628991192537142288",
+        "name": "Cultivation",
+        "filterType": 2,
+        "starlingKey": "cultivation"
+      },
+      {
+        "id": "7628991192536994832",
+        "name": "Celebrity",
+        "filterType": 2,
+        "starlingKey": "celebrity"
+      },
+      {
+        "id": "7628991192537011216",
+        "name": "Workplace",
+        "filterType": 2,
+        "starlingKey": "workplace"
+      },
+      {
+        "id": "7628991192537224208",
+        "name": "Werewolf",
+        "filterType": 2,
+        "starlingKey": "werewolf"
+      },
+      {
+        "id": "7628991192537125904",
+        "name": "Martial arts",
+        "filterType": 2,
+        "starlingKey": "martial_arts"
+      },
+      {
+        "id": "7628991192537191440",
+        "name": "Survival",
+        "filterType": 2,
+        "starlingKey": "survival"
+      },
+      {
+        "id": "7628991192537240592",
+        "name": "Vampire",
+        "filterType": 2,
+        "starlingKey": "vampire"
+      },
+      {
+        "id": "7628991192533095425",
+        "name": "High society",
+        "filterType": 2,
+        "starlingKey": "high_society"
+      }
+    ],
+    "releaseDates": [
+      {
+        "id": "0",
+        "name": "All stories",
+        "filterType": 1,
+        "starlingKey": "all_stories"
+      },
+      {
+        "id": "7628991193543840769",
+        "name": "Second chance",
+        "filterType": 2,
+        "starlingKey": "second_chance"
+      },
+      {
+        "id": "7628991193543873537",
+        "name": "Body double",
+        "filterType": 2,
+        "starlingKey": "body_double"
+      },
+      {
+        "id": "7628991193543889921",
+        "name": "Lucky baby",
+        "filterType": 2,
+        "starlingKey": "lucky_baby"
+      },
+      {
+        "id": "7629315153363735553",
+        "name": "Group favorite",
+        "filterType": 2,
+        "starlingKey": "group_favorite"
+      },
+      {
+        "id": "7628991193631773697",
+        "name": "Elite",
+        "filterType": 2,
+        "starlingKey": "elite"
+      },
+      {
+        "id": "7628991193543775233",
+        "name": "Power couple",
+        "filterType": 2,
+        "starlingKey": "power_couple"
+      },
+      {
+        "id": "7628991193543791617",
+        "name": "Boss lady",
+        "filterType": 2,
+        "starlingKey": "boss_lady"
+      },
+      {
+        "id": "7628991193543808001",
+        "name": "Secret identity",
+        "filterType": 2,
+        "starlingKey": "secret_identity"
+      },
+      {
+        "id": "7628991193543824385",
+        "name": "Transmigration",
+        "filterType": 2,
+        "starlingKey": "transmigration"
+      },
+      {
+        "id": "7628991193543857153",
+        "name": "Mind reading",
+        "filterType": 2,
+        "starlingKey": "mind_reading"
+      },
+      {
+        "id": "7628991193543906305",
+        "name": "Glorious return",
+        "filterType": 2,
+        "starlingKey": "glorious_return"
+      },
+      {
+        "id": "7628991193543922689",
+        "name": "Hidden master",
+        "filterType": 2,
+        "starlingKey": "hidden_master"
+      },
+      {
+        "id": "7628991193631691777",
+        "name": "Master descends",
+        "filterType": 2,
+        "starlingKey": "master_descends"
+      },
+      {
+        "id": "7628991193631708161",
+        "name": "Female growth",
+        "filterType": 2,
+        "starlingKey": "female_growth"
+      },
+      {
+        "id": "7628991193631806465",
+        "name": "Sarcastic & shrewd",
+        "filterType": 2,
+        "starlingKey": "sarcastic_&_shrewd"
+      },
+      {
+        "id": "7628991193631740929",
+        "name": "Always lucky",
+        "filterType": 2,
+        "starlingKey": "always_lucky"
+      },
+      {
+        "id": "7628991193631757313",
+        "name": "Legacy awakened",
+        "filterType": 2,
+        "starlingKey": "legacy_awakened"
+      },
+      {
+        "id": "7628991193631724545",
+        "name": "Infinite worlds",
+        "filterType": 2,
+        "starlingKey": "infinite_worlds"
+      },
+      {
+        "id": "7628991193631790081",
+        "name": "Aloof",
+        "filterType": 2,
+        "starlingKey": "aloof"
+      }
+    ]
+  },
+  "trending": {
+    "count": 5,
+    "hasMore": true,
+    "cursor": "1:6:5",
+    "sampleSeries": [
+      {
+        "id": "7696090095891715080",
+        "title": "MY SON PICKED My WIFE",
+        "author": {
+          "uniqueId": "vervedramaca",
+          "nickname": "VerveDrama"
+        },
+        "episodeCount": 49,
+        "watchCount": 163084396,
+        "coverUrl": "https://p16-common-sign.tiktokcdn.com/tos-alisg-i-xbj99bix8q-sg/16e12f508b0947c0925551abf7c13236~tplv-photomode-zoomcover:960:960.avif?dr=14555&x-expires=1793055600&x-signature=1xp%2BK%2FuLXRtMIDIfKcbpuPtWHSQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my2&ftpl=1"
+      },
+      {
+        "id": "7697198329477993479",
+        "title": "My Sickly Tycoon Husband",
+        "author": {
+          "uniqueId": "mapledrama_ca",
+          "nickname": "MapleDrama"
+        },
+        "episodeCount": 50,
+        "watchCount": 102190256,
+        "coverUrl": "https://p16-common-sign.tiktokcdn.com/tos-alisg-i-xbj99bix8q-sg/082a541fe1fd4aa69f50d0f45724d5a4~tplv-photomode-zoomcover:960:960.avif?dr=14555&x-expires=1793055600&x-signature=PKAsKq8yps9LPiSaR5QxxH%2BJaNA%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my2&ftpl=1"
+      },
+      {
+        "id": "7696956076663411733",
+        "title": "El bebé de mi jefe me habla",
+        "author": {
+          "uniqueId": "babydrama_mx",
+          "nickname": "Baby Drama"
+        },
+        "episodeCount": 52,
+        "watchCount": 20180737,
+        "coverUrl": "https://p16-common-sign.tiktokcdn.com/tos-alisg-i-fjfgkmyddx-sg/8d82a468e63944c5ac3adbcaee27b96c~tplv-photomode-zoomcover:960:960.avif?dr=14555&x-expires=1793055600&x-signature=dOWzY6RD6Ic%2FbzOO%2FSKaXvFdizo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my2&ftpl=1"
+      }
+    ]
+  },
+  "ranking": {
+    "count": 5,
+    "hasMore": true,
+    "cursor": "1:12",
+    "sampleSeries": [
+      {
+        "id": "7699435017697121288",
+        "title": "I won a Rolls-Royce for five hundred",
+        "author": {
+          "type": "User",
+          "id": "7680038149046174740",
+          "uniqueId": "moonlydrama_ca",
+          "nickname": "MoonlyDrama",
+          "avatarLarger": "https://p16-common-sign.tiktokcdn.com/tos-alisg-avt-0068/97040915d0ec2f9b1261b64204888597~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=14579&refresh_token=d796eb41&x-expires=1793055600&x-signature=Y4y2mqdAr23fgHKWmI8yCNc380k%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my2",
+          "avatarMedium": "https://p16-common-sign.tiktokcdn.com/tos-alisg-avt-0068/97040915d0ec2f9b1261b64204888597~tplv-tiktokx-cropcenter:720:720.jpeg?dr=14579&refresh_token=9984e36e&x-expires=1793055600&x-signature=I1S4ZUJoaoO3HsBxwdp1IKJPtJA%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my2",
+          "avatarThumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-avt-0068/97040915d0ec2f9b1261b64204888597~tplv-tiktokx-cropcenter:100:100.jpeg?dr=14579&refresh_token=7ab3444c&x-expires=1793055600&x-signature=UkbWpaaoHcbIGd1f9Pb05jOVlP8%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my2",
+          "signature": "Best short drama highlights\nRevenge · Rebirth · Cinderella comeback\nDaily new clips | Follow for non‑stop plot twists",
+          "verified": false,
+          "secUid": "MS4wLjABAAAAyTF6oNstAF2RxTmfLEniTwwpZiO-0aG_1qr3LGpMLhQzrjlcVoVQ1NTitZmZIWgA",
+          "privateAccount": false,
+          "isUnderAge18": false,
+          "relation": 0,
+          "commentSetting": 0,
+          "duetSetting": 0,
+          "stitchSetting": 0,
+          "downloadSetting": 0,
+          "stats": {
+            "followerCount": 442300,
+            "followingCount": 0,
+            "heartCount": 14800000,
+            "videoCount": 0,
+            "diggCount": 0,
+            "friendCount": 0
+          },
+          "isShortDramaCreator": false
+        },
+        "episodeCount": 48,
+        "watchCount": 1307830,
+        "coverUrl": "https://p16-common-sign.tiktokcdn.com/tos-alisg-i-xbj99bix8q-sg/a38a6ed7aca444ac91cac6523f60f406~tplv-photomode-zoomcover:960:960.avif?dr=14555&x-expires=1793055600&x-signature=6g7%2BmL1OrcKd6EWBsOpKcsaJYxI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my2&ftpl=1"
+      },
+      {
+        "id": "7699481713839870984",
+        "title": "Baarish (New)",
+        "author": {
+          "type": "User",
+          "id": "7675664150659810305",
+          "uniqueId": "verticaltv_ca",
+          "nickname": "VerticalTV",
+          "avatarLarger": "https://p16-common-sign.tiktokcdn.com/tos-alisg-avt-0068/1157969b24307f2a2712bfad8dad0d3e~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=14579&refresh_token=5faf222c&x-expires=1793055600&x-signature=wdNlOkHMZC9lpPTqjK7IpSOWchc%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my2",
+          "avatarMedium": "https://p16-common-sign.tiktokcdn.com/tos-alisg-avt-0068/1157969b24307f2a2712bfad8dad0d3e~tplv-tiktokx-cropcenter:720:720.jpeg?dr=14579&refresh_token=7e57016a&x-expires=1793055600&x-signature=osYG6bXupVHho5fiI1z26EKGDD0%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my2",
+          "avatarThumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-avt-0068/1157969b24307f2a2712bfad8dad0d3e~tplv-tiktokx-cropcenter:100:100.jpeg?dr=14579&refresh_token=032f6281&x-expires=1793055600&x-signature=jK455gWdQtLef4s8M%2BVAvA2K95c%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my2",
+          "signature": "Welcome to the World of Dramas. Quick, Snappy and all the drama that you need in your life. Start Watching Today!! Loved by 40 Million People",
+          "verified": false,
+          "secUid": "MS4wLjABAAAATe6OPccmk-4As9nmA8XHgbk7kPuZNrqV7ewL3Jjs3vKPi3nMU3WIkue1phExCh0t",
+          "privateAccount": false,
+          "isUnderAge18": false,
+          "relation": 0,
+          "commentSetting": 0,
+          "duetSetting": 0,
+          "stitchSetting": 0,
+          "downloadSetting": 0,
+          "stats": {
+            "followerCount": 37800,
+            "followingCount": 0,
+            "heartCount": 1500000,
+            "videoCount": 0,
+            "diggCount": 0,
+            "friendCount": 0
+          },
+          "isShortDramaCreator": false
+        },
+        "episodeCount": 60,
+        "watchCount": 810952,
+        "coverUrl": "https://p16-common-sign.tiktokcdn.com/tos-alisg-i-xbj99bix8q-sg/3c4c50f5bb9a40a3bf99726e5d15e607~tplv-photomode-zoomcover:960:960.avif?dr=14555&x-expires=1793055600&x-signature=ewDxYiJHLa%2BhIyZMDo1uY0AEh6U%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my2&ftpl=1"
+      },
+      {
+        "id": "7699455643538920469",
+        "title": "I Hear Animals and Make $30K a Month",
+        "author": {
+          "type": "User",
+          "id": "7628410172562457616",
+          "uniqueId": "heatherqun3",
+          "nickname": "MegaTalesViral_88",
+          "avatarLarger": "https://p16-common-sign.tiktokcdn.com/tos-alisg-avt-0068/118a545b2f8dda0cc4e0c0aed3819143~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=14579&refresh_token=40facb44&x-expires=1793055600&x-signature=GZH6vbpj5bhGA7enC%2FtYVqZ%2BXsg%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my2",
+          "avatarMedium": "https://p16-common-sign.tiktokcdn.com/tos-alisg-avt-0068/118a545b2f8dda0cc4e0c0aed3819143~tplv-tiktokx-cropcenter:720:720.jpeg?dr=14579&refresh_token=cfc1d6b1&x-expires=1793055600&x-signature=WVgeQxech9z7Shd8VR9QIKfai90%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my2",
+          "avatarThumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-avt-0068/118a545b2f8dda0cc4e0c0aed3819143~tplv-tiktokx-cropcenter:100:100.jpeg?dr=14579&refresh_token=1039b7e3&x-expires=1793055600&x-signature=HrEwzLFWPyKHene7fTYJaQ%2Bc1kY%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my2",
+          "signature": "Just one episode?Don't lie—this drama hooks you right from the start.",
+          "verified": false,
+          "secUid": "MS4wLjABAAAAwsTdMQoLHMJcSflj234748TBQsGTuGesGmpmWXRNs6F5E94XVuvJQcw8KC_KD0xg",
+          "privateAccount": false,
+          "isUnderAge18": false,
+          "relation": 0,
+          "commentSetting": 0,
+          "duetSetting": 0,
+          "stitchSetting": 0,
+          "downloadSetting": 0,
+          "stats": {
+            "followerCount": 38300,
+            "followingCount": 1,
+            "heartCount": 1200000,
+            "videoCount": 0,
+            "diggCount": 0,
+            "friendCount": 0
+          },
+          "isShortDramaCreator": false
+        },
+        "episodeCount": 30,
+        "watchCount": 831112,
+        "coverUrl": "https://p19-common-sign.tiktokcdn.com/tos-alisg-i-xbj99bix8q-sg/db1b97d29c6e4312aca0d829aaa63c7d~tplv-photomode-zoomcover:960:960.avif?dr=14555&x-expires=1793055600&x-signature=aEjTPXFXsXXNRN1aWbgzDlbjclQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my2&ftpl=1"
+      }
+    ]
+  },
+  "latest": {
+    "count": 5,
+    "hasMore": true,
+    "cursor": "1:5",
+    "sampleSeries": [
+      {
+        "id": "7697520906540684295",
+        "title": "Opps! My Secret Boyfriend is A Billionaire",
+        "author": {
+          "type": "User",
+          "id": "7621278404289168414",
+          "uniqueId": "ttshortdrama_us02",
+          "nickname": "Daily Shorts",
+          "avatarLarger": "https://p19-common-sign.tiktokcdn.com/tos-maliva-avt-0068/e64922f3aeca98017db7fd4ead8c915b~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=14579&refresh_token=cd9802fb&x-expires=1793055600&x-signature=uG5t9F5zSlSIvp%2F413K5RxPeGc8%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my2",
+          "avatarMedium": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/e64922f3aeca98017db7fd4ead8c915b~tplv-tiktokx-cropcenter:720:720.jpeg?dr=14579&refresh_token=5812457a&x-expires=1793055600&x-signature=wX43%2BAQavRGQtrLnbMeKN%2F7NvUU%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my2",
+          "avatarThumb": "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/e64922f3aeca98017db7fd4ead8c915b~tplv-tiktokx-cropcenter:100:100.jpeg?dr=14579&refresh_token=cfc56691&x-expires=1793055600&x-signature=Jl42wkB3YgUEwSvkf5O%2BZzuuH4E%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my2",
+          "signature": "Tiny dramas, huge emotions—love, hate & everything in between 💔💎",
+          "verified": false,
+          "secUid": "MS4wLjABAAAAurgBF_WJeZx5PmfsQvFPbtSRJ2fnzDz1xbzzGs5PZt2OIUWga91ljkxgSz5E3jtO",
+          "privateAccount": false,
+          "isUnderAge18": false,
+          "relation": 0,
+          "commentSetting": 0,
+          "duetSetting": 0,
+          "stitchSetting": 0,
+          "downloadSetting": 0,
+          "stats": {
+            "followerCount": 793900,
+            "followingCount": 32,
+            "heartCount": 15800000,
+            "videoCount": 0,
+            "diggCount": 3,
+            "friendCount": 13
+          },
+          "isShortDramaCreator": false
+        },
+        "episodeCount": 61,
+        "watchCount": 2075720,
+        "coverUrl": "https://p16-common-sign.tiktokcdn.com/tos-alisg-i-xbj99bix8q-sg/ed2f38bd32a34c5b81edce37aee83300~tplv-photomode-zoomcover:960:960.avif?dr=14555&x-expires=1793055600&x-signature=m6BTp%2B4grFEv4eIkavFto9bWkwo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my2&ftpl=1"
+      },
+      {
+        "id": "7696090095891715080",
+        "title": "MY SON PICKED My WIFE",
+        "author": {
+          "type": "User",
+          "id": "7673726051705881621",
+          "uniqueId": "vervedramaca",
+          "nickname": "VerveDrama",
+          "avatarLarger": "https://p16-common-sign.tiktokcdn.com/tos-alisg-avt-0068/df1f304a4a91468e9c7fbc31e33a1296~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=14579&refresh_token=0035c5de&x-expires=1793055600&x-signature=7kTx16jmc%2BdrRMFP5i9RrjhZ0e8%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my2",
+          "avatarMedium": "https://p16-common-sign.tiktokcdn.com/tos-alisg-avt-0068/df1f304a4a91468e9c7fbc31e33a1296~tplv-tiktokx-cropcenter:720:720.jpeg?dr=14579&refresh_token=090697e6&x-expires=1793055600&x-signature=YiA3e%2FgZhNZdlKSGocz%2BcstN0%2Fo%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my2",
+          "avatarThumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-avt-0068/df1f304a4a91468e9c7fbc31e33a1296~tplv-tiktokx-cropcenter:100:100.jpeg?dr=14579&refresh_token=8bd5a755&x-expires=1793055600&x-signature=TTsK%2FgKOjDVLJl1bMYMTB8lJqBM%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my2",
+          "signature": "Premium short drama studio.\nCrafted for every second.",
+          "verified": false,
+          "secUid": "MS4wLjABAAAALag85hx8eP-0JmzmTxz-BKb8pkgVkjl2bHlr9Mzf11tXP-Pn62aneav6JDkgd9bJ",
+          "privateAccount": false,
+          "isUnderAge18": false,
+          "relation": 0,
+          "commentSetting": 0,
+          "duetSetting": 0,
+          "stitchSetting": 0,
+          "downloadSetting": 0,
+          "stats": {
+            "followerCount": 446000,
+            "followingCount": 0,
+            "heartCount": 12200000,
+            "videoCount": 0,
+            "diggCount": 0,
+            "friendCount": 0
+          },
+          "isShortDramaCreator": false
+        },
+        "episodeCount": 49,
+        "watchCount": 163084396,
+        "coverUrl": "https://p16-common-sign.tiktokcdn.com/tos-alisg-i-xbj99bix8q-sg/16e12f508b0947c0925551abf7c13236~tplv-photomode-zoomcover:960:960.avif?dr=14555&x-expires=1793055600&x-signature=1xp%2BK%2FuLXRtMIDIfKcbpuPtWHSQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my2&ftpl=1"
+      },
+      {
+        "id": "7697198329477993479",
+        "title": "My Sickly Tycoon Husband",
+        "author": {
+          "type": "User",
+          "id": "7560971982360790028",
+          "uniqueId": "mapledrama_ca",
+          "nickname": "MapleDrama",
+          "avatarLarger": "https://p16-common-sign.tiktokcdn.com/tos-alisg-avt-0068/087632f84511db021934ad6f1ce481e3~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=14579&refresh_token=d74cade6&x-expires=1793055600&x-signature=aWNokJLa43ne0KPqdvKKYfO2tEA%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my2",
+          "avatarMedium": "https://p16-common-sign.tiktokcdn.com/tos-alisg-avt-0068/087632f84511db021934ad6f1ce481e3~tplv-tiktokx-cropcenter:720:720.jpeg?dr=14579&refresh_token=dcaab8a6&x-expires=1793055600&x-signature=WeI6El73O9yKtms5napkX8hyJbs%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my2",
+          "avatarThumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-avt-0068/087632f84511db021934ad6f1ce481e3~tplv-tiktokx-cropcenter:100:100.jpeg?dr=14579&refresh_token=5cb5032f&x-expires=1793055600&x-signature=MvhXJeWZFEp1nOvz6luPdyMbptY%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my2",
+          "signature": "🎬Bite-sized dramas. \n🥳Big emotions. \n👀New twists every day. \n👉Follow for your next obsession.",
+          "verified": false,
+          "secUid": "MS4wLjABAAAA5h4zT5Z0J8QzdbjMP2n1aXxbOfmLlb75mpyBGSjZj_kKmH-sSN1To9KVapHbXdHj",
+          "privateAccount": false,
+          "isUnderAge18": false,
+          "relation": 0,
+          "commentSetting": 0,
+          "duetSetting": 0,
+          "stitchSetting": 0,
+          "downloadSetting": 0,
+          "stats": {
+            "followerCount": 273000,
+            "followingCount": 14,
+            "heartCount": 6300000,
+            "videoCount": 0,
+            "diggCount": 3,
+            "friendCount": 0
+          },
+          "isShortDramaCreator": false
+        },
+        "episodeCount": 50,
+        "watchCount": 102103256,
+        "coverUrl": "https://p16-common-sign.tiktokcdn.com/tos-alisg-i-xbj99bix8q-sg/082a541fe1fd4aa69f50d0f45724d5a4~tplv-photomode-zoomcover:960:960.avif?dr=14555&x-expires=1793055600&x-signature=PKAsKq8yps9LPiSaR5QxxH%2BJaNA%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my2&ftpl=1"
+      }
+    ]
+  },
+  "newReleases": {
+    "count": 5,
+    "hasMore": true,
+    "cursor": "1:7",
+    "sampleSeries": [
+      {
+        "id": "7696090095891715080",
+        "title": "MY SON PICKED My WIFE",
+        "author": {
+          "type": "User",
+          "id": "7673726051705881621",
+          "uniqueId": "vervedramaca",
+          "nickname": "VerveDrama",
+          "avatarLarger": "https://p16-common-sign.tiktokcdn.com/tos-alisg-avt-0068/df1f304a4a91468e9c7fbc31e33a1296~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=14579&refresh_token=0035c5de&x-expires=1793055600&x-signature=7kTx16jmc%2BdrRMFP5i9RrjhZ0e8%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my2",
+          "avatarMedium": "https://p16-common-sign.tiktokcdn.com/tos-alisg-avt-0068/df1f304a4a91468e9c7fbc31e33a1296~tplv-tiktokx-cropcenter:720:720.jpeg?dr=14579&refresh_token=090697e6&x-expires=1793055600&x-signature=YiA3e%2FgZhNZdlKSGocz%2BcstN0%2Fo%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my2",
+          "avatarThumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-avt-0068/df1f304a4a91468e9c7fbc31e33a1296~tplv-tiktokx-cropcenter:100:100.jpeg?dr=14579&refresh_token=8bd5a755&x-expires=1793055600&x-signature=TTsK%2FgKOjDVLJl1bMYMTB8lJqBM%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my2",
+          "signature": "Premium short drama studio.\nCrafted for every second.",
+          "verified": false,
+          "secUid": "MS4wLjABAAAALag85hx8eP-0JmzmTxz-BKb8pkgVkjl2bHlr9Mzf11tXP-Pn62aneav6JDkgd9bJ",
+          "privateAccount": false,
+          "isUnderAge18": false,
+          "relation": 0,
+          "commentSetting": 0,
+          "duetSetting": 0,
+          "stitchSetting": 0,
+          "downloadSetting": 0,
+          "stats": {
+            "followerCount": 446000,
+            "followingCount": 0,
+            "heartCount": 12200000,
+            "videoCount": 0,
+            "diggCount": 0,
+            "friendCount": 0
+          },
+          "isShortDramaCreator": false
+        },
+        "episodeCount": 49,
+        "watchCount": 163084396,
+        "coverUrl": "https://p16-common-sign.tiktokcdn.com/tos-alisg-i-xbj99bix8q-sg/16e12f508b0947c0925551abf7c13236~tplv-photomode-zoomcover:960:960.avif?dr=14555&x-expires=1793055600&x-signature=1xp%2BK%2FuLXRtMIDIfKcbpuPtWHSQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my2&ftpl=1"
+      },
+      {
+        "id": "7697198329477993479",
+        "title": "My Sickly Tycoon Husband",
+        "author": {
+          "type": "User",
+          "id": "7560971982360790028",
+          "uniqueId": "mapledrama_ca",
+          "nickname": "MapleDrama",
+          "avatarLarger": "https://p16-common-sign.tiktokcdn.com/tos-alisg-avt-0068/087632f84511db021934ad6f1ce481e3~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=14579&refresh_token=d74cade6&x-expires=1793055600&x-signature=aWNokJLa43ne0KPqdvKKYfO2tEA%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my2",
+          "avatarMedium": "https://p16-common-sign.tiktokcdn.com/tos-alisg-avt-0068/087632f84511db021934ad6f1ce481e3~tplv-tiktokx-cropcenter:720:720.jpeg?dr=14579&refresh_token=dcaab8a6&x-expires=1793055600&x-signature=WeI6El73O9yKtms5napkX8hyJbs%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my2",
+          "avatarThumb": "https://p19-common-sign.tiktokcdn.com/tos-alisg-avt-0068/087632f84511db021934ad6f1ce481e3~tplv-tiktokx-cropcenter:100:100.jpeg?dr=14579&refresh_token=5de7feed&x-expires=1793055600&x-signature=wUjtEVG9ZdWKEAzvmAXxqKQ9ls8%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my2",
+          "signature": "🎬Bite-sized dramas. \n🥳Big emotions. \n👀New twists every day. \n👉Follow for your next obsession.",
+          "verified": false,
+          "secUid": "MS4wLjABAAAA5h4zT5Z0J8QzdbjMP2n1aXxbOfmLlb75mpyBGSjZj_kKmH-sSN1To9KVapHbXdHj",
+          "privateAccount": false,
+          "isUnderAge18": false,
+          "relation": 0,
+          "commentSetting": 0,
+          "duetSetting": 0,
+          "stitchSetting": 0,
+          "downloadSetting": 0,
+          "stats": {
+            "followerCount": 273000,
+            "followingCount": 14,
+            "heartCount": 6300000,
+            "videoCount": 0,
+            "diggCount": 3,
+            "friendCount": 0
+          },
+          "isShortDramaCreator": false
+        },
+        "episodeCount": 50,
+        "watchCount": 102103256,
+        "coverUrl": "https://p16-common-sign.tiktokcdn.com/tos-alisg-i-xbj99bix8q-sg/082a541fe1fd4aa69f50d0f45724d5a4~tplv-photomode-zoomcover:960:960.avif?dr=14555&x-expires=1793055600&x-signature=PKAsKq8yps9LPiSaR5QxxH%2BJaNA%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my2&ftpl=1"
+      },
+      {
+        "id": "7696956076663411733",
+        "title": "El bebé de mi jefe me habla",
+        "author": {
+          "type": "User",
+          "id": "7654100728697668615",
+          "uniqueId": "babydrama_mx",
+          "nickname": "Baby Drama",
+          "avatarLarger": "https://p19-common-sign.tiktokcdn.com/tos-alisg-avt-0068/51b3051ea65b93e0607747a3b9194517~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=14579&refresh_token=66bd3ced&x-expires=1793055600&x-signature=UEGquR2wfrwqbVBpa8oQzb36aZI%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my2",
+          "avatarMedium": "https://p16-common-sign.tiktokcdn.com/tos-alisg-avt-0068/51b3051ea65b93e0607747a3b9194517~tplv-tiktokx-cropcenter:720:720.jpeg?dr=14579&refresh_token=a224aa8b&x-expires=1793055600&x-signature=FSVc04ZOQ8pH%2F8f73vtk3CD9CMk%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my2",
+          "avatarThumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-avt-0068/51b3051ea65b93e0607747a3b9194517~tplv-tiktokx-cropcenter:100:100.jpeg?dr=14579&refresh_token=c0bdfda2&x-expires=1793055600&x-signature=H2Ceh%2F%2FNAlKnVwrUjqnNIZBRzrE%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my2",
+          "signature": "Collabs&inquiries:1994091866@qq.com\nLove baby short dramas? Follow me!",
+          "verified": false,
+          "secUid": "MS4wLjABAAAA1ujAXZtripKy_nv8kxh7AYeZba7OANTvCvcBFVHST4oLaZbT3-B0vyCGVY4G3DVj",
+          "privateAccount": false,
+          "isUnderAge18": false,
+          "relation": 0,
+          "commentSetting": 0,
+          "duetSetting": 0,
+          "stitchSetting": 0,
+          "downloadSetting": 0,
+          "stats": {
+            "followerCount": 109900,
+            "followingCount": 0,
+            "heartCount": 3400000,
+            "videoCount": 0,
+            "diggCount": 0,
+            "friendCount": 0
+          },
+          "isShortDramaCreator": false
+        },
+        "episodeCount": 52,
+        "watchCount": 20166371,
+        "coverUrl": "https://p16-common-sign.tiktokcdn.com/tos-alisg-i-fjfgkmyddx-sg/8d82a468e63944c5ac3adbcaee27b96c~tplv-photomode-zoomcover:960:960.avif?dr=14555&x-expires=1793055600&x-signature=dOWzY6RD6Ic%2FbzOO%2FSKaXvFdizo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my2&ftpl=1"
+      }
+    ]
+  },
+  "sampleEpisodePlaylist": {
+    "dramaId": "7696090095891715080",
+    "totalEpisodesLoaded": 10,
+    "hasMore": true,
+    "cursor": "10",
+    "episodes": [
+      {
+        "id": "7696090556186971410",
+        "duration": 173,
+        "stats": {
+          "playCount": 27700000,
+          "diggCount": 559900,
+          "commentCount": 2981,
+          "shareCount": 23100,
+          "collectCount": 157500
+        }
+      },
+      {
+        "id": "7696090553871502610",
+        "duration": 118,
+        "stats": {
+          "playCount": 5700000,
+          "diggCount": 214900,
+          "commentCount": 1019,
+          "shareCount": 3918,
+          "collectCount": 32400
+        }
+      },
+      {
+        "id": "7696090547798150407",
+        "duration": 91,
+        "stats": {
+          "playCount": 8500000,
+          "diggCount": 235600,
+          "commentCount": 776,
+          "shareCount": 3870,
+          "collectCount": 36700
+        }
+      },
+      {
+        "id": "7696090538772122887",
+        "duration": 123,
+        "stats": {
+          "playCount": 7000000,
+          "diggCount": 200300,
+          "commentCount": 857,
+          "shareCount": 3747,
+          "collectCount": 33500
+        }
+      },
+      {
+        "id": "7696090562604092690",
+        "duration": 67,
+        "stats": {
+          "playCount": 10800000,
+          "diggCount": 241900,
+          "commentCount": 694,
+          "shareCount": 4197,
+          "collectCount": 45600
+        }
+      }
+    ]
+  },
+  "sampleResolvedStream": {
+    "status": "playable",
+    "sourceType": "mp4",
+    "playUrl": "https://v16m-default.tiktokcdn-us.com/1199180051d250614cb5f5e4339f6f98/6add8e1e/video/tos/useast8/tos-useast8-ve-0068c004-tx2/oo1RfAD2isGEfFRJqE9LngVEAQd2BkcIGss1E1/?a=0&bti=OHYpOTY0Zik3OjlmOm01MzE6ZDQ0MDo%3D&&bt=2475&ft=z_0YDP7f2.xjVMOtnamfu3qzgqM5Sxyd8v.7TGbL&mime_type=video_mp4&rc=NWYzOzwzaDQ1ZTs8NzdkZUBpanhtN3A5cmxvZTMzaTczNEAuMjEuNi5eXzExMDIxYTEyYSNsaWQuMmRzZ2FhLS1kMTJzcw%3D%3D&vvpl=1&l=202610242305216CCBF8F6FE8706CE2D52&btag=e000b8000",
+    "downloadUrl": "https://v16m-default.tiktokcdn-us.com/0bfd21922ae47ce47641d0cd0b9f0832/6add8e1e/video/tos/useast8/tos-useast8-ve-0068c002-tx2/oofqG1RmEoD2J2MEisFnLQQfEiGkIABs19gVEA/?a=0&bti=OHYpOTY0Zik3OjlmOm01MzE6ZDQ0MDo%3D&&bt=2316&ft=z_0YDP7f2.xjVMOtnamfu3qzgqM5Sxyd8v.7TGbL&mime_type=video_mp4&rc=OGhoPDxoNDQzZWVoPDc0Z0BpanhtN3A5cmxvZTMzaTczNEAuL2JfL140Xy4xNGE1NV4vYSNsaWQuMmRzZ2FhLS1kMTJzcw%3D%3D&vvpl=1&l=202610242305216CCBF8F6FE8706CE2D52&btag=e000b0000",
+    "duration": 11,
+    "ratio": "720p",
+    "qualities": [
+      {
+        "gearName": "adapt_lowest_1080_1",
+        "qualityType": 2,
+        "bitrate": 2670116,
+        "url": "https://v16m-default.tiktokcdn-us.com/342f9ab971196c4b863e5a301c98612a/6add8e1e/video/tos/useast8/tos-useast8-ve-0068c003-tx2/oUDlQfekDEvqFgJELbEj1oIS2BVEEx1As7RJnA/?a=0&bti=OHYpOTY0Zik3OjlmOm01MzE6ZDQ0MDo%3D&&bt=2607&ft=z_0YDP7f2.xjVMOtnamfu3qzgqM5Sxyd8v.7TGbL&mime_type=video_mp4&rc=M2U1NWZoOzNpZTVnNmlkZ0BpanhtN3A5cmxvZTMzaTczNEBgXjRgMDA0XzMxNC00MjI0YSNsaWQuMmRzZ2FhLS1kMTJzcw%3D%3D&vvpl=1&l=202610242305216CCBF8F6FE8706CE2D52&btag=e000b8000"
+      },
+      {
+        "gearName": "adapt_lower_720_1",
+        "qualityType": 14,
+        "bitrate": 1096992,
+        "url": "https://v16m-default.tiktokcdn-us.com/3416d3ed56102f7ee683857f13ecee17/6add8e1e/video/tos/useast8/tos-useast8-ve-0068c003-tx2/o4ejgIOJEYXfdFIu7FCYReTMAAL0IVArtrGqyI/?a=0&bti=OHYpOTY0Zik3OjlmOm01MzE6ZDQ0MDo%3D&&bt=1071&ft=z_0YDP7f2.xjVMOtnamfu3qzgqM5Sxyd8v.7TGbL&mime_type=video_mp4&rc=ZDg4M2doaDdoNTw2NTZpOkBpanhtN3A5cmxvZTMzaTczNEAtXmMxYmAzXjQxNGNfNTFgYSNsaWQuMmRzZ2FhLS1kMTJzcw%3D%3D&vvpl=1&l=202610242305216CCBF8F6FE8706CE2D52&btag=e000b8000"
+      },
+      {
+        "gearName": "adapt_540_1",
+        "qualityType": 28,
+        "bitrate": 835727,
+        "url": "https://v16m-default.tiktokcdn-us.com/ef1c3d96323ea5b9a3ffbc0fadd57980/6add8e1e/video/tos/useast8/tos-useast8-ve-0068c003-tx2/osjLnsQxIEeJHPBE1jqEbDLB2EzkV1GfAAEFnR/?a=0&bti=OHYpOTY0Zik3OjlmOm01MzE6ZDQ0MDo%3D&&bt=816&ft=z_0YDP7f2.xjVMOtnamfu3qzgqM5Sxyd8v.7TGbL&mime_type=video_mp4&rc=O2dnNDpkZDg2ZTc2NGlpaUBpanhtN3A5cmxvZTMzaTczNEA0LjRjMDItXjMxM2IxMDNeYSNsaWQuMmRzZ2FhLS1kMTJzcw%3D%3D&vvpl=1&l=202610242305216CCBF8F6FE8706CE2D52&btag=e000b8000"
+      },
+      {
+        "gearName": "lower_540_1",
+        "qualityType": 24,
+        "bitrate": 803854,
+        "url": "https://v16m-default.tiktokcdn-us.com/a3c2ac2efb8f6dc16167890fd33a97c2/6add8e1e/video/tos/useast8/tos-useast8-ve-0068c001-tx2/ocIjTKRuYdwIPfGrCAeELJAqAOg7fEoXIrtVHI/?a=0&bti=OHYpOTY0Zik3OjlmOm01MzE6ZDQ0MDo%3D&&bt=785&ft=z_0YDP7f2.xjVMOtnamfu3qzgqM5Sxyd8v.7TGbL&mime_type=video_mp4&rc=ZDhmPDg2Nzw7ZzQ3ZGk6Z0BpanhtN3A5cmxvZTMzaTczNEBhNmNgNi9fNV4xMl80YWJiYSNsaWQuMmRzZ2FhLS1kMTJzcw%3D%3D&vvpl=1&l=202610242305216CCBF8F6FE8706CE2D52&btag=e000b8000"
+      },
+      {
+        "gearName": "lowest_540_1",
+        "qualityType": 25,
+        "bitrate": 444265,
+        "url": "https://v16m-default.tiktokcdn-us.com/fa6ee5a5b1e6ba3956ec81c44c993685/6add8e1e/video/tos/useast8/tos-useast8-pve-0068-tx2/oAFnfwWq2AN1E9LSEsk1WRDBVT3fIiJXEEiAQD/?a=0&bti=OHYpOTY0Zik3OjlmOm01MzE6ZDQ0MDo%3D&&bt=433&ft=z_0YDP7f2.xjVMOtnamfu3qzgqM5Sxyd8v.7TGbL&mime_type=video_mp4&rc=Zjk7aDU1aWk0ZDo3ZzM0aEBpanhtN3A5cmxvZTMzaTczNEA0LjNiM15hXzUxYGExLjBeYSNsaWQuMmRzZ2FhLS1kMTJzcw%3D%3D&vvpl=1&l=202610242305216CCBF8F6FE8706CE2D52&btag=e000b8000"
+      }
+    ],
+    "allPlayUrls": [
+      "https://v16m-default.tiktokcdn-us.com/1199180051d250614cb5f5e4339f6f98/6add8e1e/video/tos/useast8/tos-useast8-ve-0068c004-tx2/oo1RfAD2isGEfFRJqE9LngVEAQd2BkcIGss1E1/?a=0&bti=OHYpOTY0Zik3OjlmOm01MzE6ZDQ0MDo%3D&&bt=2475&ft=z_0YDP7f2.xjVMOtnamfu3qzgqM5Sxyd8v.7TGbL&mime_type=video_mp4&rc=NWYzOzwzaDQ1ZTs8NzdkZUBpanhtN3A5cmxvZTMzaTczNEAuMjEuNi5eXzExMDIxYTEyYSNsaWQuMmRzZ2FhLS1kMTJzcw%3D%3D&vvpl=1&l=202610242305216CCBF8F6FE8706CE2D52&btag=e000b8000",
+      "https://v16m-default.tiktokcdn-us.com/1199180051d250614cb5f5e4339f6f98/6add8e1e/video/tos/useast8/tos-useast8-ve-0068c004-tx2/oo1RfAD2isGEfFRJqE9LngVEAQd2BkcIGss1E1/?a=0&bti=OHYpOTY0Zik3OjlmOm01MzE6ZDQ0MDo%3D&&bt=2475&ft=z_0YDP7f2.xjVMOtnamfu3qzgqM5Sxyd8v.7TGbL&mime_type=video_mp4&rc=NWYzOzwzaDQ1ZTs8NzdkZUBpanhtN3A5cmxvZTMzaTczNEAuMjEuNi5eXzExMDIxYTEyYSNsaWQuMmRzZ2FhLS1kMTJzcw%3D%3D&vvpl=1&l=202610242305216CCBF8F6FE8706CE2D52&btag=e000b8000",
+      "https://api16-normal-useast5.tiktokv.us/aweme/v1/play/?file_id=5b4ad44459384b42b1ae109918405c12&is_play_url=1&item_id=7699846733886459166&line=0&pt=dGlrdG9rLmZlZWQuZnlwX2FwaSYvYXdlbWUvdjEvZmVlZC8mMjAyNjEwMjQyMzA1MjE2Q0NCRjhGNkZFODcwNkNFMkQ1MiYxNzkyODgzMTIzJmQ0ZDg0ZjExZjM5Mg&signaturev3=dmlkZW9faWQ7ZmlsZV9pZDtpdGVtX2lkLjczOTgyMjA4MzNmN2IzZDY3M2U0NTc3MmFlMjg0ZDFk&source=FEED&video_id=v15044gf0000dbdljivog65m14gjluog"
+    ]
+  }
+}

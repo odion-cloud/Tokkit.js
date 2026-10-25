@@ -1,0 +1,69 @@
+{
+  "name": "@odion-cloud/tokkit.js",
+  "version": "0.1.0",
+  "description": "A comprehensive TypeScript client library for TikTok Web & Gateway APIs",
+  "type": "module",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/src/index.js",
+      "types": "./dist/src/index.d.ts"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "node -e \"const fs=require('fs');fs.rmSync('dist',{recursive:true,force:true})\"",
+    "prepublishOnly": "npm run clean && npm run build",
+    "test": "node test/integration.mjs",
+    "test:endpoints": "node dev-scripts/test-endpoints.mjs",
+    "test:ssr": "node dev-scripts/dump-ssr.mjs",
+    "example:drama": "node examples/drama/browse.mjs",
+    "example:explore": "node examples/explore/browse.mjs",
+    "example:live": "node examples/search/search-live.mjs",
+    "example:music": "node examples/search/search-music.mjs",
+    "example:oembed": "node examples/oembed/get-embed.mjs",
+    "docs:serve": "npx -y serve docs"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "keywords": [
+    "tiktok",
+    "api",
+    "client",
+    "scraper",
+    "short-drama",
+    "search",
+    "explore",
+    "live",
+    "music",
+    "feed",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/odion-cloud/TokKit.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/odion-cloud/TokKit.js/issues"
+  },
+  "homepage": "https://github.com/odion-cloud/Tokkit.js#readme",
+  "author": "TokKit Contributors",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "puppeteer-core": "^25.16.0",
+    "typescript": "^7.0.2"
+  }
+}

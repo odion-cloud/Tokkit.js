@@ -1,0 +1,51 @@
+name: Publish to NPM
+
+on:
+  release:
+    types: [published]
+  push:
+    branches:
+      - main
+    paths:
+      - 'package.json'
+      - 'src/**'
+  workflow_dispatch:
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build TypeScript
+        run: npm run build
+
+      - name: Publish to NPM
+        run: |
+          CURRENT_VERSION=$(node -p "require('./package.json').version")
+          NPM_VERSION=$(npm view @odion-cloud/tokkit.js version 2>/dev/null || echo "0.0.0")
+          echo "Current package.json version: $CURRENT_VERSION"
+          echo "Published npm registry version: $NPM_VERSION"
+
+          if [ "$CURRENT_VERSION" != "$NPM_VERSION" ]; then
+            echo "Publishing @odion-cloud/tokkit.js@$CURRENT_VERSION to npm..."
+            npm publish --access public
+          else
+            echo "Version $CURRENT_VERSION is already published on npm. Skipping publish."
+          fi
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

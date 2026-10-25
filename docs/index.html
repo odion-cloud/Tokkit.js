@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TokKit.js — Modern TypeScript Client for TikTok</title>
+  <meta name="description" content="A TypeScript client for TikTok's internal Web and Short Drama APIs. Runs on Node.js, Deno, Bun, and modern browsers.">
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+
+  <!-- Header Navbar -->
+  <header class="site-header">
+    <div class="header-left">
+      <button class="icon-btn menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+
+      <a href="#intro" class="brand-logo">
+        <img src="assets/icon.png" class="brand-icon" alt="TokKit">
+        <span>TokKit<span class="brand-accent">.js</span></span>
+      </a>
+    </div>
+
+    <div class="header-right">
+      <ul class="nav-links">
+        <li><a href="#intro" class="nav-link active">Guide</a></li>
+        <li><a href="#api-reference" class="nav-link">API Reference</a></li>
+        <li><a href="https://github.com/odion-cloud/Tokkit.js" target="_blank" rel="noreferrer" class="nav-link">GitHub ↗</a></li>
+      </ul>
+
+      <button class="icon-btn" id="theme-toggle" aria-label="Toggle Theme">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      </button>
+
+      <div class="search-container">
+        <svg class="search-icon" viewBox="0 0 24 24"><path d="M21.71 20.29l-5.4-5.39A7.9 7.9 0 0 0 18 10a8 8 0 1 0-8 8 7.9 7.9 0 0 0 4.9-1.69l5.39 5.4a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM4 10a6 6 0 1 1 6 6 6 6 0 0 1-6-6z"/></svg>
+        <input type="text" class="search-input" id="header-search-input" placeholder="Search" readonly>
+        <span class="search-shortcut">Ctrl K</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="docs-container">
+    <!-- Left Sidebar -->
+    <aside class="docs-sidebar">
+      <div class="sidebar-group">
+        <div class="sidebar-title">Guide</div>
+        <ul class="sidebar-menu">
+          <li><a href="#intro" class="sidebar-link active">Introduction</a></li>
+          <li><a href="#quick-start" class="sidebar-link">Getting Started</a></li>
+          <li><a href="#architecture" class="sidebar-link">Architecture</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-group">
+        <div class="sidebar-title">Short Drama</div>
+        <ul class="sidebar-menu">
+          <li><a href="#drama-overview" class="sidebar-link">Overview</a></li>
+          <li><a href="#drama-trending" class="sidebar-link">Trending & Ranking</a></li>
+          <li><a href="#drama-latest" class="sidebar-link">Latest Releases</a></li>
+          <li><a href="#drama-filters" class="sidebar-link">Genres & Themes</a></li>
+          <li><a href="#drama-episodes" class="sidebar-link">Episode Playlists</a></li>
+          <li><a href="#drama-playback" class="sidebar-link">Direct Playback</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-group">
+        <div class="sidebar-title">Feeds</div>
+        <ul class="sidebar-menu">
+          <li><a href="#fyp" class="sidebar-link">For You Page</a></li>
+          <li><a href="#explore" class="sidebar-link">Explore</a></li>
+          <li><a href="#live" class="sidebar-link">Live Streams</a></li>
+          <li><a href="#music" class="sidebar-link">Music & Sounds</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-group">
+        <div class="sidebar-title">Endpoints</div>
+        <ul class="sidebar-menu">
+          <li><a href="#video-resolver" class="sidebar-link">Stream Resolver</a></li>
+          <li><a href="#users" class="sidebar-link">User Profiles</a></li>
+          <li><a href="#comments" class="sidebar-link">Comments</a></li>
+          <li><a href="#hashtags" class="sidebar-link">Hashtags</a></li>
+          <li><a href="#oembed" class="sidebar-link">oEmbed</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-group">
+        <div class="sidebar-title">Reference</div>
+        <ul class="sidebar-menu">
+          <li><a href="#api-reference" class="sidebar-link">API Reference</a></li>
+          <li><a href="#errors" class="sidebar-link">Error Handling</a></li>
+          <li><a href="#signing" class="sidebar-link">Request Signing</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content Articles -->
+    <main class="docs-main">
+      <!-- SECTION 1: Introduction -->
+      <section id="intro" class="doc-section">
+        <h1 class="page-title">Introduction</h1>
+
+        <p class="lead-text">
+          A TypeScript/JavaScript client for TikTok's internal Web and Short Drama APIs. Runs on Node.js, Deno, Bun, modern browsers, and more.
+        </p>
+
+        <p class="meta-links">
+          <a href="https://github.com/odion-cloud/Tokkit.js" target="_blank" rel="noreferrer">GitHub ↗</a> | 
+          <a href="https://www.npmjs.com/package/@odion-cloud/tokkit.js" target="_blank" rel="noreferrer">NPM ↗</a>
+        </p>
+
+        <p class="disclaimer-text">
+          <strong>Disclaimer:</strong> This library is not affiliated with TikTok, ByteDance, or any of their subsidiaries.
+        </p>
+
+        <div class="page-meta-row">
+          <a href="https://github.com/odion-cloud/Tokkit.js" target="_blank" rel="noreferrer" class="edit-link">
+            <span>✏️</span> Edit this page ↗
+          </a>
+          <span class="last-updated">Last Updated: 10/25/26, 4:00 PM</span>
+        </div>
+
+        <div class="page-nav-footer">
+          <div></div>
+          <a href="#quick-start" class="nav-card next">
+            <span class="nav-card-label">Next ›</span>
+            <span class="nav-card-title">Getting Started</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- SECTION 2: Getting Started -->
+      <section id="quick-start" class="doc-section" style="display: none;">
+        <h1 class="page-title">Getting Started</h1>
+
+        <h2 id="prerequisites">Prerequisites</h2>
+        <p>TokKit runs on Node.js, Deno, Bun, and modern browsers.</p>
+        <p>It requires a runtime with the following features:</p>
+        <ul>
+          <li><strong>fetch</strong>: Native fetch implementation (Node.js 18+, Bun, Deno, modern browsers).</li>
+          <li><strong>WebCrypto</strong>: Standard <code>crypto.getRandomValues</code> for token entropy.</li>
+          <li><strong>EventTarget</strong>: Standard <code>EventTarget</code> and <code>CustomEvent</code> APIs.</li>
+        </ul>
+
+        <h2 id="installation">Installation</h2>
+        <div class="code-block-box">
+          <span class="code-lang-tag">sh</span>
+          <button class="code-copy-btn">📋</button>
+          <div class="code-content-grid">
+            <div class="line-nums">
+              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span>
+            </div>
+            <pre><code><span class="t-comment"># NPM</span>
+<span class="t-keyword">npm</span> install @odion-cloud/tokkit.js
+
+<span class="t-comment"># Bun</span>
+<span class="t-keyword">bun</span> add @odion-cloud/tokkit.js
+
+<span class="t-comment"># Deno</span>
+<span class="t-keyword">deno</span> add npm:@odion-cloud/tokkit.js</code></pre>
+          </div>
+        </div>
+
+        <h2 id="basic-usage">Basic Usage</h2>
+        <div class="code-block-box">
+          <span class="code-lang-tag">ts</span>
+          <button class="code-copy-btn">📋</button>
+          <div class="code-content-grid">
+            <div class="line-nums">
+              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span>
+            </div>
+            <pre><code><span class="t-keyword">import</span> { TokKit } <span class="t-keyword">from</span> <span class="t-string">'@odion-cloud/tokkit.js'</span>;
+
+<span class="t-comment">// Initialize client session (auto device registration & tokens)</span>
+<span class="t-keyword">const</span> tokkit = <span class="t-keyword">await</span> TokKit.<span class="t-func">create</span>();
+
+<span class="t-keyword">const</span> trending = <span class="t-keyword">await</span> tokkit.shortDrama.<span class="t-func">getTrending</span>();
+console.<span class="t-func">log</span>(trending);</code></pre>
+          </div>
+        </div>
+
+        <h2 id="configuration-options">Configuration Options</h2>
+        <p>You can customize the client session by passing an options object to <code>TokKit.create()</code>:</p>
+
+        <div class="param-item">
+          <div class="param-title"><code>lang</code> <span class="param-type">(string)</span></div>
+          <ul class="param-details">
+            <li><strong>Description:</strong> Language locale for session requests.</li>
+            <li><strong>Default:</strong> <code>en</code></li>
+          </ul>
+        </div>
+
+        <div class="param-item">
+          <div class="param-title"><code>location</code> <span class="param-type">(string)</span></div>
+          <ul class="param-details">
+            <li><strong>Description:</strong> Geolocation region code (e.g. <code>US</code>, <code>GB</code>, <code>FR</code>).</li>
+            <li><strong>Default:</strong> <code>US</code></li>
+          </ul>
+        </div>
+
+        <div class="param-item">
+          <div class="param-title"><code>user_agent</code> <span class="param-type">(string)</span></div>
+          <ul class="param-details">
+            <li><strong>Description:</strong> Custom User-Agent header string.</li>
+            <li><strong>Default:</strong> <code>undefined</code> (auto-generated modern browser User-Agent)</li>
+          </ul>
+        </div>
+
+        <div class="param-item">
+          <div class="param-title"><code>proxy</code> <span class="param-type">(string)</span></div>
+          <ul class="param-details">
+            <li><strong>Description:</strong> HTTP or SOCKS5 proxy URL for egress requests.</li>
+            <li><strong>Default:</strong> <code>undefined</code></li>
+          </ul>
+        </div>
+
+        <div class="page-meta-row">
+          <a href="https://github.com/odion-cloud/Tokkit.js" target="_blank" rel="noreferrer" class="edit-link">
+            <span>✏️</span> Edit this page ↗
+          </a>
+          <span class="last-updated">Last Updated: 10/25/26, 4:00 PM</span>
+        </div>
+
+        <div class="page-nav-footer">
+          <a href="#intro" class="nav-card prev">
+            <span class="nav-card-label">‹ Prev</span>
+            <span class="nav-card-title">Introduction</span>
+          </a>
+          <a href="#architecture" class="nav-card next">
+            <span class="nav-card-label">Next ›</span>
+            <span class="nav-card-title">Architecture</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- SECTION 3: Architecture -->
+      <section id="architecture" class="doc-section" style="display: none;">
+        <h1 class="page-title">Architecture</h1>
+        <p class="lead-text">TokKit is designed around zero-dependency web standards (Fetch API, WebCrypto, ESM) to run universally across any runtime.</p>
+
+        <h2 id="multi-runtime-support">Multi-Runtime Support</h2>
+        <p>TokKit detects and runs transparently across modern JavaScript runtimes without polyfills or native binary add-ons:</p>
+        <ul>
+          <li><strong>Node.js 18+</strong>: Uses built-in undici-backed native <code>fetch</code> and <code>node:crypto</code>.</li>
+          <li><strong>Bun & Deno</strong>: First-class native ESM execution out of the box.</li>
+          <li><strong>Browser & Edge</strong>: Zero Node-only API leaks, runs seamlessly in Cloudflare Workers and standard web workers.</li>
+        </ul>
+
+        <h2 id="session-lifecycle">Session Lifecycle</h2>
+        <p>Upon calling <code>TokKit.create()</code>, the client executes an initial handshake with TikTok's gateway:</p>
+        <ol>
+          <li>Acquires anonymous guest cookies (<code>ttwid</code>, <code>msToken</code>).</li>
+          <li>Initializes device hardware spoofing parameters (screen width, platform, language).</li>
+          <li>Instantiates internal service modules (<code>shortDrama</code>, <code>feeds</code>, <code>resolver</code>).</li>
+        </ol>
+
+        <div class="page-meta-row">
+          <a href="https://github.com/odion-cloud/Tokkit.js" target="_blank" rel="noreferrer" class="edit-link">
+            <span>✏️</span> Edit this page ↗
+          </a>
+          <span class="last-updated">Last Updated: 10/25/26, 4:00 PM</span>
+        </div>
+
+        <div class="page-nav-footer">
+          <a href="#quick-start" class="nav-card prev">
+            <span class="nav-card-label">‹ Prev</span>
+            <span class="nav-card-title">Getting Started</span>
+          </a>
+          <a href="#drama-overview" class="nav-card next">
+            <span class="nav-card-label">Next ›</span>
+            <span class="nav-card-title">Drama Overview</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- SECTION 4: Short Drama Overview -->
+      <section id="drama-overview" class="doc-section" style="display: none;">
+        <h1 class="page-title">Short Drama Overview</h1>
+        <p class="lead-text">Reverse-engineers TikTok's official <code>/shortdrama</code> web portal for querying miniseries, rankings, release dates, and video streams.</p>
+
+        <h2 id="available-endpoints">Available Endpoints</h2>
+        <p>The <code>tokkit.shortDrama</code> module exposes direct access to all portal data:</p>
+        <ul>
+          <li><strong>Trending & Ranking</strong>: Top series by weekly and daily view count.</li>
+          <li><strong>Latest Releases</strong>: Chronologically sorted new short drama releases.</li>
+          <li><strong>Genres & Themes</strong>: Dynamic 18 genres and 28 themes filter taxonomy.</li>
+          <li><strong>Episode Playlists</strong>: Complete episode lists (1..N) with playback video URLs.</li>
+        </ul>
+
+        <div class="code-block-box">
+          <span class="code-lang-tag">ts</span>
+          <button class="code-copy-btn">📋</button>
+          <div class="code-content-grid">
+            <div class="line-nums">
+              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+            </div>
+            <pre><code><span class="t-keyword">const</span> tokkit = <span class="t-keyword">await</span> TokKit.<span class="t-func">create</span>();
+
+<span class="t-comment">// Access all short drama APIs</span>
+<span class="t-keyword">const</span> trending = <span class="t-keyword">await</span> tokkit.shortDrama.<span class="t-func">getTrending</span>();
+<span class="t-keyword">const</span> episodes = <span class="t-keyword">await</span> tokkit.shortDrama.<span class="t-func">getEpisodes</span>(<span class="t-string">'7428819203'</span>);</code></pre>
+          </div>
+        </div>
+
+        <div class="page-meta-row">
+          <a href="https://github.com/odion-cloud/Tokkit.js" target="_blank" rel="noreferrer" class="edit-link">
+            <span>✏️</span> Edit this page ↗
+          </a>
+          <span class="last-updated">Last Updated: 10/25/26, 4:00 PM</span>
+        </div>
+
+        <div class="page-nav-footer">
+          <a href="#architecture" class="nav-card prev">
+            <span class="nav-card-label">‹ Prev</span>
+            <span class="nav-card-title">Architecture</span>
+          </a>
+          <a href="#drama-trending" class="nav-card next">
+            <span class="nav-card-label">Next ›</span>
+            <span class="nav-card-title">Trending & Ranking</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- SECTION 5: Drama Trending & Ranking -->
+      <section id="drama-trending" class="doc-section" style="display: none;">
+        <h1 class="page-title">Trending & Ranking</h1>
+        <p class="lead-text">Fetch top ranked and trending miniseries from TikTok's Short Drama charts.</p>
+
+        <h2 id="usage">Usage</h2>
+        <div class="code-block-box">
+          <span class="code-lang-tag">ts</span>
+          <button class="code-copy-btn">📋</button>
+          <div class="code-content-grid">
+            <div class="line-nums">
+              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span>
+            </div>
+            <pre><code><span class="t-comment">// Fetch Top Trending short dramas</span>
+<span class="t-keyword">const</span> trending = <span class="t-keyword">await</span> tokkit.shortDrama.<span class="t-func">getTrending</span>({ cursor: <span class="t-num">0</span>, count: <span class="t-num">18</span> });
+
+<span class="t-comment">// Fetch Top Ranked short dramas</span>
+<span class="t-keyword">const</span> ranking = <span class="t-keyword">await</span> tokkit.shortDrama.<span class="t-func">getRanking</span>({ cursor: <span class="t-num">0</span>, count: <span class="t-num">18</span> });
+
+console.<span class="t-func">log</span>(trending.series[<span class="t-num">0</span>].title, trending.series[<span class="t-num">0</span>].coverUrl);</code></pre>
+          </div>
+        </div>
+
+        <h2 id="parameters">Parameters</h2>
+        <div class="param-item">
+          <div class="param-title"><code>cursor</code> <span class="param-type">(number)</span></div>
+          <ul class="param-details">
+            <li><strong>Description:</strong> Pagination offset index.</li>
+            <li><strong>Default:</strong> <code>0</code></li>
+          </ul>
+        </div>
+
+        <div class="param-item">
+          <div class="param-title"><code>count</code> <span class="param-type">(number)</span></div>
+          <ul class="param-details">
+            <li><strong>Description:</strong> Number of items to retrieve per page.</li>
+            <li><strong>Default:</strong> <code>18</code></li>
+          </ul>
+        </div>
+
+        <div class="page-meta-row">
+          <a href="https://github.com/odion-cloud/Tokkit.js" target="_blank" rel="noreferrer" class="edit-link">
+            <span>✏️</span> Edit this page ↗
+          </a>
+          <span class="last-updated">Last Updated: 10/25/26, 4:00 PM</span>
+        </div>
+
+        <div class="page-nav-footer">
+          <a href="#drama-overview" class="nav-card prev">
+            <span class="nav-card-label">‹ Prev</span>
+            <span class="nav-card-title">Drama Overview</span>
+          </a>
+          <a href="#drama-latest" class="nav-card next">
+            <span class="nav-card-label">Next ›</span>
+            <span class="nav-card-title">Latest Releases</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- SECTION 6: Drama Latest Releases -->
+      <section id="drama-latest" class="doc-section" style="display: none;">
+        <h1 class="page-title">Latest Releases</h1>
+        <p class="lead-text">Discover newly uploaded short drama series sorted chronologically.</p>
+
+        <h2 id="usage">Usage</h2>
+        <div class="code-block-box">
+          <span class="code-lang-tag">ts</span>
+          <button class="code-copy-btn">📋</button>
+          <div class="code-content-grid">
+            <div class="line-nums">
+              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+            </div>
+            <pre><code><span class="t-keyword">const</span> latest = <span class="t-keyword">await</span> tokkit.shortDrama.<span class="t-func">getLatest</span>({
+  cursor: <span class="t-num">0</span>,
+  count: <span class="t-num">18</span>
+});
+
+console.<span class="t-func">log</span>(`Found ${latest.series.length} new releases`);</code></pre>
+          </div>
+        </div>
+
+        <div class="page-meta-row">
+          <a href="https://github.com/odion-cloud/Tokkit.js" target="_blank" rel="noreferrer" class="edit-link">
+            <span>✏️</span> Edit this page ↗
+          </a>
+          <span class="last-updated">Last Updated: 10/25/26, 4:00 PM</span>
+        </div>
+
+        <div class="page-nav-footer">
+          <a href="#drama-trending" class="nav-card prev">
+            <span class="nav-card-label">‹ Prev</span>
+            <span class="nav-card-title">Trending & Ranking</span>
+          </a>
+          <a href="#drama-filters" class="nav-card next">
+            <span class="nav-card-label">Next ›</span>
+            <span class="nav-card-title">Genres & Themes</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- SECTION 7: Drama Genres & Themes -->
+      <section id="drama-filters" class="doc-section" style="display: none;">
+        <h1 class="page-title">Genres & Themes</h1>
+        <p class="lead-text">Filter short dramas across 18 genres, 28 story themes, and release dates.</p>
+
+        <h2 id="fetch-categories">1. Fetch Categories</h2>
+        <p>TikTok provides a dynamic category list via <code>/api/drama/filter/category_list/</code>:</p>
+        <div class="code-block-box">
+          <span class="code-lang-tag">ts</span>
+          <button class="code-copy-btn">📋</button>
+          <div class="code-content-grid">
+            <div class="line-nums">
+              <span>1</span><span>2</span>
+            </div>
+            <pre><code><span class="t-keyword">const</span> categories = <span class="t-keyword">await</span> tokkit.shortDrama.<span class="t-func">getCategories</span>();
+<span class="t-comment">// categories.genres -> 18 genres (Action, Romance, Werewolf, Fantasy...)</span></code></pre>
+          </div>
+        </div>
+
+        <h2 id="filter-by-tag">2. Filter Dramas by Tag ID</h2>
+        <div class="code-block-box">
+          <span class="code-lang-tag">ts</span>
+          <button class="code-copy-btn">📋</button>
+          <div class="code-content-grid">
+            <div class="line-nums">
+              <span>1</span><span>2</span><span>3</span><span>4</span>
+            </div>
+            <pre><code><span class="t-keyword">const</span> filtered = <span class="t-keyword">await</span> tokkit.shortDrama.<span class="t-func">filter</span>({
+  tagIDList: <span class="t-string">"0,7628991192537158672,0"</span>, <span class="t-comment">// Fantasy tag</span>
+  count: <span class="t-num">18</span>
+});</code></pre>
+          </div>
+        </div>
+
+        <div class="page-meta-row">
+          <a href="https://github.com/odion-cloud/Tokkit.js" target="_blank" rel="noreferrer" class="edit-link">
+            <span>✏️</span> Edit this page ↗
+          </a>
+          <span class="last-updated">Last Updated: 10/25/26, 4:00 PM</span>
+        </div>
+
+        <div class="page-nav-footer">
+          <a href="#drama-latest" class="nav-card prev">
+            <span class="nav-card-label">‹ Prev</span>
+            <span class="nav-card-title">Latest Releases</span>
+          </a>
+          <a href="#drama-episodes" class="nav-card next">
+            <span class="nav-card-label">Next ›</span>
+            <span class="nav-card-title">Episode Playlists</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- SECTION 8: Drama Episode Playlists -->
+      <section id="drama-episodes" class="doc-section" style="display: none;">
+        <h1 class="page-title">Episode Playlists</h1>
+        <p class="lead-text">Retrieve complete episode playlists 1..N and metadata for any drama series.</p>
+
+        <h2 id="usage">Usage</h2>
+        <div class="code-block-box">
+          <span class="code-lang-tag">ts</span>
+          <button class="code-copy-btn">📋</button>
+          <div class="code-content-grid">
+            <div class="line-nums">
+              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+            </div>
+            <pre><code><span class="t-keyword">const</span> playlist = <span class="t-keyword">await</span> tokkit.shortDrama.<span class="t-func">getEpisodes</span>(<span class="t-string">'7428819203'</span>, {
+  cursor: <span class="t-num">0</span>,
+  count: <span class="t-num">20</span>
+});
+
+console.<span class="t-func">log</span>(`Total episodes: ${playlist.totalEpisodes}`);</code></pre>
+          </div>
+        </div>
+
+        <div class="page-meta-row">
+          <a href="https://github.com/odion-cloud/Tokkit.js" target="_blank" rel="noreferrer" class="edit-link">
+            <span>✏️</span> Edit this page ↗
+          </a>
+          <span class="last-updated">Last Updated: 10/25/26, 4:00 PM</span>
+        </div>
+
+        <div class="page-nav-footer">
+          <a href="#drama-filters" class="nav-card prev">
+            <span class="nav-card-label">‹ Prev</span>
+            <span class="nav-card-title">Genres & Themes</span>
+          </a>
+          <a href="#drama-playback" class="nav-card next">
+            <span class="nav-card-label">Next ›</span>
+            <span class="nav-card-title">Direct Playback</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- SECTION 9: Direct Playback -->
+      <section id="drama-playback" class="doc-section" style="display: none;">
+        <h1 class="page-title">Direct Playback</h1>
+        <p class="lead-text">Extract direct HTML5 playable video stream URLs without cookies or authentication.</p>
+
+        <h2 id="stream-url-extraction">Stream URL Extraction</h2>
+        <div class="code-block-box">
+          <span class="code-lang-tag">ts</span>
+          <button class="code-copy-btn">📋</button>
+          <div class="code-content-grid">
+            <div class="line-nums">
+              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+            </div>
+            <pre><code><span class="t-keyword">const</span> episode = playlist.episodes[<span class="t-num">0</span>];
+
+<span class="t-comment">// Direct CDN MP4 URL (playable in standard &lt;video&gt; players)</span>
+<span class="t-keyword">const</span> streamUrl = episode.playAddr;
+console.<span class="t-func">log</span>(streamUrl);</code></pre>
+          </div>
+        </div>
+
+        <div class="page-meta-row">
+          <a href="https://github.com/odion-cloud/Tokkit.js" target="_blank" rel="noreferrer" class="edit-link">
+            <span>✏️</span> Edit this page ↗
+          </a>
+          <span class="last-updated">Last Updated: 10/25/26, 4:00 PM</span>
+        </div>
+
+        <div class="page-nav-footer">
+          <a href="#drama-episodes" class="nav-card prev">
+            <span class="nav-card-label">‹ Prev</span>
+            <span class="nav-card-title">Episode Playlists</span>
+          </a>
+          <a href="#fyp" class="nav-card next">
+            <span class="nav-card-label">Next ›</span>
+            <span class="nav-card-title">For You Page</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- SECTION 10: For You Page Feed -->
+      <section id="fyp" class="doc-section" style="display: none;">
+        <h1 class="page-title">For You Page (FYP)</h1>
+        <p class="lead-text">Stream algorithmic recommendation video posts from TikTok's FYP gateway.</p>
+
+        <h2 id="usage">Usage</h2>
+        <div class="code-block-box">
+          <span class="code-lang-tag">ts</span>
+          <button class="code-copy-btn">📋</button>
+          <div class="code-content-grid">
+            <div class="line-nums">
+              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+            </div>
+            <pre><code><span class="t-keyword">const</span> fyp = <span class="t-keyword">await</span> tokkit.feeds.<span class="t-func">getForYou</span>({ count: <span class="t-num">10</span> });
+
+<span class="t-keyword">for</span> (<span class="t-keyword">const</span> item <span class="t-keyword">of</span> fyp.items) {
+  console.<span class="t-func">log</span>(item.author.nickname, item.desc, item.video.playAddr);
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="page-meta-row">
+          <a href="https://github.com/odion-cloud/Tokkit.js" target="_blank" rel="noreferrer" class="edit-link">
+            <span>✏️</span> Edit this page ↗
+          </a>
+          <span class="last-updated">Last Updated: 10/25/26, 4:00 PM</span>
+        </div>
+
+        <div class="page-nav-footer">
+          <a href="#drama-playback" class="nav-card prev">
+            <span class="nav-card-label">‹ Prev</span>
+            <span class="nav-card-title">Direct Playback</span>
+          </a>
+          <a href="#explore" class="nav-card next">
+            <span class="nav-card-label">Next ›</span>
+            <span class="nav-card-title">Explore Feed</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- SECTION 11: Explore -->
+      <section id="explore" class="doc-section" style="display: none;">
+        <h1 class="page-title">Explore Feed</h1>
+        <p class="lead-text">Browse TikTok's 21 category discovery feeds (Gaming, Comedy, Food, Sports...).</p>
+
+        <h2 id="usage">Usage</h2>
+        <div class="code-block-box">
+          <span class="code-lang-tag">ts</span>
+          <button class="code-copy-btn">📋</button>
+          <div class="code-content-grid">
+            <div class="line-nums">
+              <span>1</span><span>2</span><span>3</span><span>4</span>
+            </div>
+            <pre><code><span class="t-keyword">const</span> gaming = <span class="t-keyword">await</span> tokkit.feeds.<span class="t-func">getExplore</span>({
+  categoryType: <span class="t-num">101</span>, <span class="t-comment">// Gaming category ID</span>
+  count: <span class="t-num">15</span>
+});</code></pre>
+          </div>
+        </div>
+
+        <div class="page-meta-row">
+          <a href="https://github.com/odion-cloud/Tokkit.js" target="_blank" rel="noreferrer" class="edit-link">
+            <span>✏️</span> Edit this page ↗
+          </a>
+          <span class="last-updated">Last Updated: 10/25/26, 4:00 PM</span>
+        </div>
+
+        <div class="page-nav-footer">
+          <a href="#fyp" class="nav-card prev">
+            <span class="nav-card-label">‹ Prev</span>
+            <span class="nav-card-title">For You Page</span>
+          </a>
+          <a href="#live" class="nav-card next">
+            <span class="nav-card-label">Next ›</span>
+            <span class="nav-card-title">Live Streams</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- SECTION 12: Live Streams -->
+      <section id="live" class="doc-section" style="display: none;">
+        <h1 class="page-title">Live Streams</h1>
+        <p class="lead-text">Discover active live broadcasts and extract RTMP / FLV pull stream URLs.</p>
+
+        <h2 id="usage">Usage</h2>
+        <div class="code-block-box">
+          <span class="code-lang-tag">ts</span>
+          <button class="code-copy-btn">📋</button>
+          <div class="code-content-grid">
+            <div class="line-nums">
+              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+            </div>
+            <pre><code><span class="t-keyword">const</span> lives = <span class="t-keyword">await</span> tokkit.feeds.<span class="t-func">searchLive</span>(<span class="t-string">'gaming'</span>);
+
+<span class="t-keyword">const</span> stream = lives.broadcasts[<span class="t-num">0</span>];
+console.<span class="t-func">log</span>(stream.title, stream.rtmpUrl, stream.flvUrl);</code></pre>
+          </div>
+        </div>
+
+        <div class="page-meta-row">
+          <a href="https://github.com/odion-cloud/Tokkit.js" target="_blank" rel="noreferrer" class="edit-link">
+            <span>✏️</span> Edit this page ↗
+          </a>
+          <span class="last-updated">Last Updated: 10/25/26, 4:00 PM</span>
+        </div>
+
+        <div class="page-nav-footer">
+          <a href="#explore" class="nav-card prev">
+            <span class="nav-card-label">‹ Prev</span>
+            <span class="nav-card-title">Explore Feed</span>
+          </a>
+          <a href="#music" class="nav-card next">
+            <span class="nav-card-label">Next ›</span>
+            <span class="nav-card-title">Music & Sounds</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- SECTION 13: Music & Sounds -->
+      <section id="music" class="doc-section" style="display: none;">
+        <h1 class="page-title">Music & Sounds</h1>
+        <p class="lead-text">Search audio tracks with full metadata and direct MP3/MP4 audio stream URLs.</p>
+
+        <h2 id="usage">Usage</h2>
+        <div class="code-block-box">
+          <span class="code-lang-tag">ts</span>
+          <button class="code-copy-btn">📋</button>
+          <div class="code-content-grid">
+            <div class="line-nums">
+              <span>1</span><span>2</span><span>3</span><span>4</span>
+            </div>
+            <pre><code><span class="t-keyword">const</span> sounds = <span class="t-keyword">await</span> tokkit.feeds.<span class="t-func">searchMusic</span>(<span class="t-string">'lofi chill'</span>);
+
+<span class="t-keyword">const</span> track = sounds.items[<span class="t-num">0</span>];
+console.<span class="t-func">log</span>(track.title, track.author, track.playUrl);</code></pre>
+          </div>
+        </div>
+
+        <div class="page-meta-row">
+          <a href="https://github.com/odion-cloud/Tokkit.js" target="_blank" rel="noreferrer" class="edit-link">
+            <span>✏️</span> Edit this page ↗
+          </a>
+          <span class="last-updated">Last Updated: 10/25/26, 4:00 PM</span>
+        </div>
+
+        <div class="page-nav-footer">
+          <a href="#live" class="nav-card prev">
+            <span class="nav-card-label">‹ Prev</span>
+            <span class="nav-card-title">Live Streams</span>
+          </a>
+          <a href="#video-resolver" class="nav-card next">
+            <span class="nav-card-label">Next ›</span>
+            <span class="nav-card-title">Stream Resolver</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- SECTION 14: Video Stream Resolver -->
+      <section id="video-resolver" class="doc-section" style="display: none;">
+        <h1 class="page-title">Stream Resolver</h1>
+        <p class="lead-text">Resolve any TikTok video URL into direct playable MP4 streams and watermark-free downloads.</p>
+
+        <h2 id="usage">Usage</h2>
+        <div class="code-block-box">
+          <span class="code-lang-tag">ts</span>
+          <button class="code-copy-btn">📋</button>
+          <div class="code-content-grid">
+            <div class="line-nums">
+              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+            </div>
+            <pre><code><span class="t-keyword">const</span> video = <span class="t-keyword">await</span> tokkit.resolver.<span class="t-func">resolve</span>(<span class="t-string">'https://www.tiktok.com/@user/video/7123456789'</span>);
+
+console.<span class="t-func">log</span>(video.title);
+console.<span class="t-func">log</span>(video.downloadUrl); <span class="t-comment">// No watermark CDN link</span>
+console.<span class="t-func">log</span>(video.hdPlayUrl);    <span class="t-comment">// 1080p MP4 direct stream</span></code></pre>
+          </div>
+        </div>
+
+        <div class="page-meta-row">
+          <a href="https://github.com/odion-cloud/Tokkit.js" target="_blank" rel="noreferrer" class="edit-link">
+            <span>✏️</span> Edit this page ↗
+          </a>
+          <span class="last-updated">Last Updated: 10/25/26, 4:00 PM</span>
+        </div>
+
+        <div class="page-nav-footer">
+          <a href="#music" class="nav-card prev">
+            <span class="nav-card-label">‹ Prev</span>
+            <span class="nav-card-title">Music & Sounds</span>
+          </a>
+          <a href="#users" class="nav-card next">
+            <span class="nav-card-label">Next ›</span>
+            <span class="nav-card-title">User Profiles</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- SECTION 15: User Profiles -->
+      <section id="users" class="doc-section" style="display: none;">
+        <h1 class="page-title">User Profiles</h1>
+        <p class="lead-text">Fetch user statistics, follower counts, verification badges, and author bio metadata.</p>
+
+        <h2 id="usage">Usage</h2>
+        <div class="code-block-box">
+          <span class="code-lang-tag">ts</span>
+          <button class="code-copy-btn">📋</button>
+          <div class="code-content-grid">
+            <div class="line-nums">
+              <span>1</span><span>2</span><span>3</span>
+            </div>
+            <pre><code><span class="t-keyword">const</span> user = <span class="t-keyword">await</span> tokkit.users.<span class="t-func">getProfile</span>(<span class="t-string">'tiktok'</span>);
+
+console.<span class="t-func">log</span>(user.nickname, user.followerCount, user.verified);</code></pre>
+          </div>
+        </div>
+
+        <div class="page-meta-row">
+          <a href="https://github.com/odion-cloud/Tokkit.js" target="_blank" rel="noreferrer" class="edit-link">
+            <span>✏️</span> Edit this page ↗
+          </a>
+          <span class="last-updated">Last Updated: 10/25/26, 4:00 PM</span>
+        </div>
+
+        <div class="page-nav-footer">
+          <a href="#video-resolver" class="nav-card prev">
+            <span class="nav-card-label">‹ Prev</span>
+            <span class="nav-card-title">Stream Resolver</span>
+          </a>
+          <a href="#comments" class="nav-card next">
+            <span class="nav-card-label">Next ›</span>
+            <span class="nav-card-title">Comments</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- SECTION 16: Comments -->
+      <section id="comments" class="doc-section" style="display: none;">
+        <h1 class="page-title">Comments</h1>
+        <p class="lead-text">Fetch video comment threads and nested replies with cursor pagination.</p>
+
+        <h2 id="usage">Usage</h2>
+        <div class="code-block-box">
+          <span class="code-lang-tag">ts</span>
+          <button class="code-copy-btn">📋</button>
+          <div class="code-content-grid">
+            <div class="line-nums">
+              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+            </div>
+            <pre><code><span class="t-keyword">const</span> comments = <span class="t-keyword">await</span> tokkit.comments.<span class="t-func">getList</span>(<span class="t-string">'7123456789'</span>, {
+  cursor: <span class="t-num">0</span>,
+  count: <span class="t-num">20</span>
+});
+
+console.<span class="t-func">log</span>(`Total comments: ${comments.total}`);</code></pre>
+          </div>
+        </div>
+
+        <div class="page-meta-row">
+          <a href="https://github.com/odion-cloud/Tokkit.js" target="_blank" rel="noreferrer" class="edit-link">
+            <span>✏️</span> Edit this page ↗
+          </a>
+          <span class="last-updated">Last Updated: 10/25/26, 4:00 PM</span>
+        </div>
+
+        <div class="page-nav-footer">
+          <a href="#users" class="nav-card prev">
+            <span class="nav-card-label">‹ Prev</span>
+            <span class="nav-card-title">User Profiles</span>
+          </a>
+          <a href="#hashtags" class="nav-card next">
+            <span class="nav-card-label">Next ›</span>
+            <span class="nav-card-title">Hashtags</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- SECTION 17: Hashtags -->
+      <section id="hashtags" class="doc-section" style="display: none;">
+        <h1 class="page-title">Hashtags</h1>
+        <p class="lead-text">Query challenge metadata, cumulative view statistics, and tagged video lists.</p>
+
+        <h2 id="usage">Usage</h2>
+        <div class="code-block-box">
+          <span class="code-lang-tag">ts</span>
+          <button class="code-copy-btn">📋</button>
+          <div class="code-content-grid">
+            <div class="line-nums">
+              <span>1</span><span>2</span><span>3</span>
+            </div>
+            <pre><code><span class="t-keyword">const</span> tag = <span class="t-keyword">await</span> tokkit.hashtags.<span class="t-func">getInfo</span>(<span class="t-string">'comedy'</span>);
+
+console.<span class="t-func">log</span>(tag.title, tag.viewCount);</code></pre>
+          </div>
+        </div>
+
+        <div class="page-meta-row">
+          <a href="https://github.com/odion-cloud/Tokkit.js" target="_blank" rel="noreferrer" class="edit-link">
+            <span>✏️</span> Edit this page ↗
+          </a>
+          <span class="last-updated">Last Updated: 10/25/26, 4:00 PM</span>
+        </div>
+
+        <div class="page-nav-footer">
+          <a href="#comments" class="nav-card prev">
+            <span class="nav-card-label">‹ Prev</span>
+            <span class="nav-card-title">Comments</span>
+          </a>
+          <a href="#oembed" class="nav-card next">
+            <span class="nav-card-label">Next ›</span>
+            <span class="nav-card-title">oEmbed</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- SECTION 18: oEmbed -->
+      <section id="oembed" class="doc-section" style="display: none;">
+        <h1 class="page-title">oEmbed</h1>
+        <p class="lead-text">Standard oEmbed endpoint wrapper for generating responsive HTML embed tags.</p>
+
+        <h2 id="usage">Usage</h2>
+        <div class="code-block-box">
+          <span class="code-lang-tag">ts</span>
+          <button class="code-copy-btn">📋</button>
+          <div class="code-content-grid">
+            <div class="line-nums">
+              <span>1</span><span>2</span><span>3</span>
+            </div>
+            <pre><code><span class="t-keyword">const</span> embed = <span class="t-keyword">await</span> tokkit.oEmbed.<span class="t-func">get</span>(<span class="t-string">'https://www.tiktok.com/@user/video/7123456789'</span>);
+
+console.<span class="t-func">log</span>(embed.html);</code></pre>
+          </div>
+        </div>
+
+        <div class="page-meta-row">
+          <a href="https://github.com/odion-cloud/Tokkit.js" target="_blank" rel="noreferrer" class="edit-link">
+            <span>✏️</span> Edit this page ↗
+          </a>
+          <span class="last-updated">Last Updated: 10/25/26, 4:00 PM</span>
+        </div>
+
+        <div class="page-nav-footer">
+          <a href="#hashtags" class="nav-card prev">
+            <span class="nav-card-label">‹ Prev</span>
+            <span class="nav-card-title">Hashtags</span>
+          </a>
+          <a href="#api-reference" class="nav-card next">
+            <span class="nav-card-label">Next ›</span>
+            <span class="nav-card-title">API Reference</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- SECTION 19: API Reference -->
+      <section id="api-reference" class="doc-section" style="display: none;">
+        <h1 class="page-title">API Reference</h1>
+        <p class="lead-text">Overview of core methods exposed by the TokKit client instance.</p>
+
+        <div class="table-wrapper">
+          <table class="api-table">
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th>Module</th>
+                <th>Return Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>TokKit.create(opts?)</code></td>
+                <td>Root</td>
+                <td><code>Promise&lt;TokKit&gt;</code></td>
+                <td>Initializes client session and device tokens</td>
+              </tr>
+              <tr>
+                <td><code>shortDrama.getTrending(opts?)</code></td>
+                <td>Drama</td>
+                <td><code>Promise&lt;DramaList&gt;</code></td>
+                <td>Fetch top trending short drama series</td>
+              </tr>
+              <tr>
+                <td><code>shortDrama.getRanking(opts?)</code></td>
+                <td>Drama</td>
+                <td><code>Promise&lt;DramaList&gt;</code></td>
+                <td>Fetch top ranked short drama miniseries</td>
+              </tr>
+              <tr>
+                <td><code>shortDrama.getLatest(opts?)</code></td>
+                <td>Drama</td>
+                <td><code>Promise&lt;DramaList&gt;</code></td>
+                <td>Fetch newly released drama series</td>
+              </tr>
+              <tr>
+                <td><code>shortDrama.filter(opts)</code></td>
+                <td>Drama</td>
+                <td><code>Promise&lt;DramaList&gt;</code></td>
+                <td>Filter dramas by composite genre/theme tag</td>
+              </tr>
+              <tr>
+                <td><code>shortDrama.getEpisodes(id, opts?)</code></td>
+                <td>Drama</td>
+                <td><code>Promise&lt;EpisodeList&gt;</code></td>
+                <td>Retrieve episode playlist and streams</td>
+              </tr>
+              <tr>
+                <td><code>feeds.getForYou(opts?)</code></td>
+                <td>Feeds</td>
+                <td><code>Promise&lt;FeedResult&gt;</code></td>
+                <td>Stream algorithmic For You Page posts</td>
+              </tr>
+              <tr>
+                <td><code>feeds.getExplore(opts?)</code></td>
+                <td>Feeds</td>
+                <td><code>Promise&lt;ExploreResult&gt;</code></td>
+                <td>Browse 21 categories discovery feed</td>
+              </tr>
+              <tr>
+                <td><code>feeds.searchLive(q)</code></td>
+                <td>Feeds</td>
+                <td><code>Promise&lt;LiveResult&gt;</code></td>
+                <td>Search active live stream broadcasts</td>
+              </tr>
+              <tr>
+                <td><code>resolver.resolve(url)</code></td>
+                <td>Resolver</td>
+                <td><code>Promise&lt;VideoInfo&gt;</code></td>
+                <td>Resolve direct MP4 stream without watermark</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="page-meta-row">
+          <a href="https://github.com/odion-cloud/Tokkit.js" target="_blank" rel="noreferrer" class="edit-link">
+            <span>✏️</span> Edit this page ↗
+          </a>
+          <span class="last-updated">Last Updated: 10/25/26, 4:00 PM</span>
+        </div>
+
+        <div class="page-nav-footer">
+          <a href="#oembed" class="nav-card prev">
+            <span class="nav-card-label">‹ Prev</span>
+            <span class="nav-card-title">oEmbed</span>
+          </a>
+          <a href="#errors" class="nav-card next">
+            <span class="nav-card-label">Next ›</span>
+            <span class="nav-card-title">Error Handling</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- SECTION 20: Error Handling -->
+      <section id="errors" class="doc-section" style="display: none;">
+        <h1 class="page-title">Error Handling</h1>
+        <p class="lead-text">TokKit exports strongly-typed error classes to catch bot blocks and network issues.</p>
+
+        <h2 id="try-catch-pattern">Try / Catch Pattern</h2>
+        <div class="code-block-box">
+          <span class="code-lang-tag">ts</span>
+          <button class="code-copy-btn">📋</button>
+          <div class="code-content-grid">
+            <div class="line-nums">
+              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+            </div>
+            <pre><code><span class="t-keyword">import</span> { TokKit, WafBlockError } <span class="t-keyword">from</span> <span class="t-string">'@odion-cloud/tokkit.js'</span>;
+
+<span class="t-keyword">try</span> {
+  <span class="t-keyword">const</span> data = <span class="t-keyword">await</span> tokkit.shortDrama.<span class="t-func">getTrending</span>();
+} <span class="t-keyword">catch</span> (err) {
+  <span class="t-keyword">if</span> (err <span class="t-keyword">instanceof</span> WafBlockError) {
+    console.<span class="t-func">error</span>(<span class="t-string">'TikTok WAF captcha block encountered'</span>);
+  }
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="page-meta-row">
+          <a href="https://github.com/odion-cloud/Tokkit.js" target="_blank" rel="noreferrer" class="edit-link">
+            <span>✏️</span> Edit this page ↗
+          </a>
+          <span class="last-updated">Last Updated: 10/25/26, 4:00 PM</span>
+        </div>
+
+        <div class="page-nav-footer">
+          <a href="#api-reference" class="nav-card prev">
+            <span class="nav-card-label">‹ Prev</span>
+            <span class="nav-card-title">API Reference</span>
+          </a>
+          <a href="#signing" class="nav-card next">
+            <span class="nav-card-label">Next ›</span>
+            <span class="nav-card-title">Request Signing</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- SECTION 21: Request Signing -->
+      <section id="signing" class="doc-section" style="display: none;">
+        <h1 class="page-title">Request Signing</h1>
+        <p class="lead-text">Built-in pure JavaScript signing algorithms and custom signer callbacks.</p>
+
+        <h2 id="custom-signer">Custom Signer Callback</h2>
+        <div class="code-block-box">
+          <span class="code-lang-tag">ts</span>
+          <button class="code-copy-btn">📋</button>
+          <div class="code-content-grid">
+            <div class="line-nums">
+              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+            </div>
+            <pre><code><span class="t-keyword">const</span> tokkit = <span class="t-keyword">await</span> TokKit.<span class="t-func">create</span>({
+  signer: <span class="t-keyword">async</span> (url, userAgent) => {
+    <span class="t-comment">// Provide custom external signing service</span>
+    <span class="t-keyword">return</span> {
+      xBogus: <span class="t-string">'DFG8...'</span>,
+      msToken: <span class="t-string">'...'</span>
+    };
+  }
+});</code></pre>
+          </div>
+        </div>
+
+        <div class="page-meta-row">
+          <a href="https://github.com/odion-cloud/Tokkit.js" target="_blank" rel="noreferrer" class="edit-link">
+            <span>✏️</span> Edit this page ↗
+          </a>
+          <span class="last-updated">Last Updated: 10/25/26, 4:00 PM</span>
+        </div>
+
+        <div class="page-nav-footer">
+          <a href="#errors" class="nav-card prev">
+            <span class="nav-card-label">‹ Prev</span>
+            <span class="nav-card-title">Error Handling</span>
+          </a>
+          <a href="#intro" class="nav-card next">
+            <span class="nav-card-label">Home ›</span>
+            <span class="nav-card-title">Introduction</span>
+          </a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Search Modal -->
+  <div class="search-modal-backdrop" id="search-modal-backdrop">
+    <div class="search-modal">
+      <div class="search-modal-header">
+        <input type="text" class="search-modal-input" id="search-modal-input" placeholder="Search documentation...">
+      </div>
+      <ul class="search-results-list" id="search-results-list"></ul>
+    </div>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
